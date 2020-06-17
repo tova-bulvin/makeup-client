@@ -1,0 +1,29 @@
+<body background=".\assets\images\p1.jpg" class="image" >
+  <p-messages [(value)]="msgs" ></p-messages>
+  <br>
+  <div class="main_div">
+    
+    <div style="text-align: center; margin-top: 100px">
+      <span class="ui-float-label">
+          <span class="ui-inputgroup-addon"><i class="fa fa-user"></i></span>
+          <input type="text" size="30" placeholder="user name" pInputText [(ngModel)]="userName">
+
+      </span>
+    </div>
+    <br>
+    <div style="text-align: center">
+      <span class="ui-float-label">
+
+          <span class="ui-inputgroup-addon"><i (mouseover)="mouseOverPassword()" (mouseout)="mouseLeavePassword()" class="fa fa-eye"></i></span>
+          <input type="{{typePassword}}" size="30" placeholder="password" pInputText [(ngModel)]="password">
+      
+        </span>
+    </div>
+    <br/>
+    <div style="text-align: center" class="ui-float-label">
+        <button pButton type="button" (click)="login()" label="login" class="ui-button-rounded ui-button-secondary" ></button>
+        <button pButton type="button" icon="pi pi-bars"  (click)="back()" label="Back menu" class="ui-button-rounded ui-button-secondary"></button>
+    </div>
+  </div>
+  <br>
+</body>

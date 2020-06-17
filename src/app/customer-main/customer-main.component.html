@@ -1,0 +1,50 @@
+
+<body background=".\assets\images\p1.jpg" class="image" >
+  <br>
+  <br>
+  <br>
+  
+  <p-blockUI  [blocked]="blockedDocument">
+      <i class="pi pi-spin pi-spinner" style="position:absolute;top:25%;left:50%;font-size: 200px"></i>
+  </p-blockUI>
+
+  <div>
+    <div style="margin-top: 2%;text-align: center">
+      <i class="fa fa-camera"></i>
+      <input #file type="file"  accept="image/*" pInputText placeholder="picture" (change)="changeName($event)" />
+    </div >
+    <br>
+
+    <div style="text-align:center ">
+      <div class="divListBox">
+          <p-listbox [options]="companies" [(ngModel)]="selectedCompanies" multiple="multiple" checkbox="checkbox" filter="filter" optionLabel="name">
+              <p-header>
+                company
+              </p-header>
+            </p-listbox>
+      </div>
+
+      <div  class="divImg">
+        <img [src]="imgURL" height="100%" width="100%"  *ngIf="imgURL" #upImg>
+      </div>
+    </div>
+  </div>
+
+  <div style="text-align: center;margin-top: 40px">
+    <button pButton type="button" (click)="save()"  icon= "pi pi-check-circle" label="ok" class="ui-button-rounded ui-button-secondary"></button>
+    <button pButton type="button" icon="pi pi-bars"  (click)="back()" label="Back menu" class="ui-button-rounded ui-button-secondary"></button>
+  </div>
+
+  <div class="danger" *ngIf="message">{{message}}</div>
+
+  <div style="text-align: center">
+    <img  src= "./assets/images/revlonMake.png" style="height: 600px">
+  </div>
+
+</body>
+
+
+
+            
+
+

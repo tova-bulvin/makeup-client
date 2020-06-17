@@ -1,0 +1,76 @@
+<body background=".\assets\images\p1.jpg" class="image"  >
+    <br>
+    <div style="height: 900px">
+        <div class="origImg">
+            <label class="lblImg" >original image</label><br>
+            <img [src]="imgURL" height="200px" *ngIf="imgURL">
+        </div>
+    <br>    
+    <br>  
+    <br>
+    <div style="text-align: center">
+    <p-card class="divImg" header="your picture 1" subheader="Subheader" [style]="{width: '360px'}" styleClass="ui-card-shadow">
+        <p-header>
+                <h1>1</h1> 
+                <h1>BEST</h1>         
+            <img src="Card" [src]= "imageList[0]" class="img-card">
+        </p-header>
+        <div class="divDetails">
+            <span id="c1">the color</span><br/>
+            <label>code: </label><span>{{matchMakeUpDto.details[0].codeInCompany}}</span><br/>
+            <label>price: </label><span>{{matchMakeUpDto.details[0].price}}</span><br/>
+            <label>description: </label><span>{{matchMakeUpDto.details[0].description}}</span><br/>
+            <label>company-name: </label><span>{{matchMakeUpDto.details[0].company.name}}</span><br/>
+        </div>
+        <p-footer>
+            <button pButton type="button" label="Choose" (click)="choose(0)" icon="pi pi-shopping-cart" class="ui-button-rounded ui-button-secondary" style="margin-right: .25em"></button>
+        </p-footer>
+    </p-card>
+
+    <p-card class="divImg" header="your picture 2" subheader="Subheader" [style]="{width: '360px'}" styleClass="ui-card-shadow">
+        <p-header>
+            <h1>2</h1>
+            <h1>BETTER</h1>  
+            <img src="Card"  [src]= "imageList[1]"class="img-card">
+        </p-header>
+        <div class="divDetails"> 
+            <span id="c2">the color</span><br/>
+                <label>code: </label><span>{{matchMakeUpDto.details[1].codeInCompany}}</span><br/>
+                <label>price: </label><span>{{matchMakeUpDto.details[1].price}}</span><br/>
+                <label>description: </label><span>{{matchMakeUpDto.details[1].description}}</span><br/>
+                <label>company-name: </label><span>{{matchMakeUpDto.details[1].company.name}}</span><br/>
+        </div>
+        <p-footer>
+            <button pButton type="button" (click)="choose(1)" label="Choose" class="ui-button-rounded ui-button-secondary" icon="pi pi-shopping-cart" style="margin-right: .25em"></button>
+        </p-footer>
+        </p-card>
+
+        <p-card class="divImg" header="your picture 3" subheader="Subheader" [style]="{width: '360px'}" styleClass="ui-card-shadow">
+            <p-header>
+                
+                    <h1>3</h1>
+                    <h1>GOOD</h1>  
+                <img src="Card"  [src]= "imageList[2]"class="img-card">
+            </p-header>
+            <div class="divDetails">
+                    <span id="c3">the color</span><br/>
+                    <label>code: </label><span>{{matchMakeUpDto.details[2].codeInCompany}}</span><br/>
+                    <label>price: </label><span>{{matchMakeUpDto.details[2].price}}</span><br/>
+                    <label>description: </label><span>{{matchMakeUpDto.details[2].description}}</span><br/>
+                    <label>company-name: </label><span>{{matchMakeUpDto.details[2].company.name}}</span><br/>
+            </div>
+
+            <p-footer>
+                <button pButton type="button" (click)="choose(2)" label="Choose" class="ui-button-rounded ui-button-secondary" icon="pi pi-shopping-cart" style="margin-right: .25em"></button>
+            </p-footer>
+            
+        </p-card>
+        </div>  
+        <footer  style=" text-align: center">
+                <span style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;font-weight: bold;width:50px">you choose picture number: {{numChoose}}</span>
+                <br/>
+                <button pButton type="button" (click)="print()" label="Save" class="ui-button-rounded ui-button-secondary" icon="pi pi-check" style="margin-right: .25em"></button>
+                <button pButton type="button" (click)="back()" label="Back" class="ui-button-rounded ui-button-secondary" icon="pi pi-chevron-circle-right" style="margin-right: .25em" ></button>
+        </footer>
+    </div>
+</body>

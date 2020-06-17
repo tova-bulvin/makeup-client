@@ -1,0 +1,22 @@
+
+.divImg{ 
+    display: inline-block; 
+    border: 5px solid black; 
+    height:300px;
+    width:400px;
+    text-align: center;
+
+}
+
+.divListBox{
+    text-align: center;
+    display: inline-block; 
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.image{
+
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    
+}

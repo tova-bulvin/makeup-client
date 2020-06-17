@@ -1,0 +1,31 @@
+<p-blockUI  [blocked]="blockedDocument">
+    <i class="pi pi-spin pi-spinner" style="position:absolute;top:25%;left:50%;font-size: 200px"></i>
+</p-blockUI>
+
+<div  id="print-section" >
+    <div style="width: 360px;margin:auto;background-color:blanchedalmond;text-align: left;padding: 4px  4px  4px  4px;border-radius: 15%;border-style: solid">
+        <h1 style="font-size: 30px;text-decoration-line: underline;text-align: center">your makeup:</h1>
+        <label style="font-size: larger; font-weight: 700">id: </label><span>{{product.id}}</span><br/>
+        <label style="font-size: larger; font-weight: 700">codeInCompany: </label><span>{{product.codeInCompany}}</span><br/>
+        <span id="color"></span><br>
+        <span style="display:none" id='r'>{{product.r}}</span>
+        <span style="display:none" id='g'>{{product.g}}</span>
+        <span  style="display:none" id='b'>{{product.b}}</span>
+        <label style="font-size: larger; font-weight: 700">price: </label><span>{{product.price}}</span><br/>
+        <label style="font-size: larger; font-weight: 700">description: </label><span>{{product.description}}</span><br/>
+        <label style="font-size: larger; font-weight: 700">company name: </label><span>{{product.company.name}}</span><br/>
+        <h2 style="font-size: 25px;text-align: center">thank you and have a good day!</h2>
+        <h3 style="font-size: 20px;text-align: center;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;text-justify: kashida;text-decoration-line:underline ">make up your make-up company</h3>
+        <br/>
+    </div>
+</div>
+<br><br>
+<footer class="foot">
+    <button pButton type="button"  label="send mail" (click)="emailFlag=true" class="ui-button-rounded ui-button-secondary" icon="pi pi-envelope" style="margin-right: .25em"></button>
+    <button pButton type="button" (click)="print()" label="Print"  class="ui-button-rounded ui-button-secondary" icon="pi pi-print" style="margin-right: .25em"></button>
+    <button pButton type="button" (click)="back()" label="Back to start" class="ui-button-rounded ui-button-secondary" icon="pi pi-chevron-circle-right" style="margin-right: .50em" ></button>
+    <div *ngIf="emailFlag">
+        <input type="email" placeholder="enter mail" [(ngModel)]="address"  pInputText /><br>
+        <button pButton type="button" (click)="email()" label="ok" class="ui-button-rounded ui-button-secondary" icon="pi pi-check" style="margin-right: .25em"></button>
+    </div>
+</footer>

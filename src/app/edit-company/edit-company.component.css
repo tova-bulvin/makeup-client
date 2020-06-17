@@ -1,0 +1,21 @@
+.image{
+
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display:block;
+    height: 900px;
+}
+
+.fail{
+    border: 1px solid red; 
+    
+}
+.main_div{
+    height:400px;
+    width: 450px ;
+    margin:auto;
+    display:block;
+    text-align: center;
+    background-color: white;
+    padding-top: 35px;
+  }

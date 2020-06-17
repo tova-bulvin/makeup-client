@@ -1,0 +1,41 @@
+<body background=".\assets\images\p1.jpg" class="image" >
+        <br>
+        <div class="main_div">
+                <h1>add/edit product</h1>
+                <form [formGroup]="form" style="text-align: center" novalidate>
+                        <label>id </label><br><input readonly placeholder="id" pInputText formControlName="id"/><br><br>
+                        <div style="margin-left:28%">
+                                <p-listbox [options]="listCompanies" formControlName="company" checkbox="checkbox"  optionLabel="name" >
+                                        <p-header>
+                                        company-name
+                                        </p-header>
+                                </p-listbox>
+                        </div><br/>
+                        <label>code-in-company </label>
+                        <br>
+                        <input type=text placeholder="code in company" pInputText formControlName="codeInCompany"[ngClass]="{'fail':form.controls.codeInCompany.invalid &&form.controls.codeInCompany.dirty}"/>
+                        <br><br>
+                        <label>r </label><br>
+                        <input type=text  placeholder="R" pInputText formControlName="r" [ngClass]="{'fail':form.controls.r.invalid &&form.controls.r.dirty}"/>
+                        <br><br>
+                        <label>g </label>
+                        <br>
+                        <input type=text  placeholder="G" pInputText formControlName="g" [ngClass]="{'fail':form.controls.g.invalid &&form.controls.g.dirty}"/>
+                        <br><br>
+                        <label>b </label>
+                        <br>
+                        <input type=text  placeholder="B" pInputText formControlName="b" [ngClass]="{'fail':form.controls.b.invalid &&form.controls.b.dirty}"/>
+                        <br><br>
+                        <label>price </label><br>
+                        <input type=text  placeholder="price" pInputText formControlName="price" [ngClass]="{'fail':form.controls.price.invalid &&form.controls.price.dirty}"/><br><br>
+                        <label>description </label><br>
+                        <input type=text  placeholder="description" pInputText formControlName="description" [ngClass]="{'fail':form.controls.price.invalid &&form.controls.price.dirty}"/><br><br>
+                        
+                        <div style="text-align: center">
+                                <button pButton type="button" (click)="saveProduct()"  icon="pi pi-check-circle"  label="ok" class="ui-button-rounded ui-button-secondary"></button>
+                                <button pButton type="button" icon="pi pi-times-circle"  (click)="cancel()" label="cancel" class="ui-button-rounded ui-button-secondary"></button>
+                        </div>
+                        
+                </form>
+        </div>
+</body>

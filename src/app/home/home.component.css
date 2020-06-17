@@ -1,0 +1,9 @@
+.size{
+    font-size: 15pt
+}
+.image{
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 900px;
+    display: block;
+}

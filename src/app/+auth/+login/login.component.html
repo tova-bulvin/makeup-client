@@ -1,0 +1,59 @@
+<div class="ui-rtl" dir="rtl">
+        <div id="header">
+            <div id="div-logo">
+                <img src="" id="top-logo" />
+    
+            </div>
+            <div id="notifications">
+            </div>
+        </div>
+        <p-button (onClick)="signOut()" label="Sign Out"></p-button>
+        <div class="ui-g ui-g-nopad" id="header-stripe">
+        </div>
+    </div>
+    
+    <div id="content-body" class="ui-g-10 ui-g-nopad">
+        <div class="jumbotron" style="text-align: center">
+            <div style="text-align: center">
+                <br>
+                <br>
+                <div style="text-align: center">
+                    <span class="ui-float-label">
+                        <i class="fas fa-user"></i> 
+                        <input type="text" size="30" placeholder="שם משתמש" pInputText [(ngModel)]="userName">
+                        <!-- <input  type="text" size="30" pInputText [(ngModel)]="userName">
+                    <label for="float-input">שם משתמש</label>-->
+                    </span>
+                </div>
+                <br>
+                <div style="text-align: center">
+                    <span class="ui-float-label">
+                            
+                        <input type="{{typePassword}}" size="30" placeholder="סיסמא" pInputText [(ngModel)]="password">
+                        <!--<input class="float-input" type="password" size="30" [(ngModel)]="password" />
+                     placeholder="סיסמא" 
+                    <label for="float-input">סיסמא</label>-->
+    
+                    </span>
+                </div>
+                <br>
+                <div></div>
+                <br>
+                <div style="text-align: center" style="color:crimson" *ngIf="!loginSucceed">
+                    <Label>{{ currentUser.errorMessage }}</Label>
+                </div>
+                <br>
+                <br>
+                <div style="text-align: center" class="ui-float-label">
+                    <p-button  (onClick)="login()" icon="pi pi-check" label="login" ></p-button>
+                    </div>
+    
+    
+            </div>
+        </div>
+    
+    
+    
+        <!-- <p-card>
+        Content
+    </p-card> -->

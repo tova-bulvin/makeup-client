@@ -1,0 +1,32 @@
+.mainDiv{
+    text-align: center;
+   
+}
+.logoDiv{
+  background-image: url("../../assets/images/logo.png")
+}
+.image{
+
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  display:block;
+  height: 1000px;
+}
+
+.fail{
+  border: 1px solid red; 
+}
+.main_div{
+  height: 900px;
+  width: 450px ;
+  margin:auto;
+  display:block;
+  text-align: center;
+  background-color: white;
+  padding-top: 15px;
+    
+}
+label,p-header{
+  font-weight: 700;
+  font-size: 15px;
+}
