@@ -6,7 +6,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 //prime-ng
 import { KeyFilterModule } from 'primeng/keyfilter';
-import { CheckboxModule, MenuModule, ContextMenuModule, ButtonModule, PanelModule, InputTextModule, DropdownModule, StepsModule,SpinnerModule, TabMenuModule,DataTableModule, FileUploadModule, RadioButtonModule, InputMaskModule,
+import { CheckboxModule, MenuModule, ContextMenuModule, ButtonModule, PanelModule, InputTextModule, DropdownModule, StepsModule,SpinnerModule, TabMenuModule, FileUploadModule, RadioButtonModule, InputMaskModule,
     ProgressSpinnerModule, LightboxModule,ListboxModule
 } from 'primeng/primeng'
 import { CardModule } from 'primeng/card';
@@ -24,9 +24,9 @@ import { SharedModule } from './shared';
 import {MessagesModule} from 'primeng/messages';
 import {MessageModule} from 'primeng/message';
 import {DataViewModule} from 'primeng/dataview';
-import { CalendarModule } from 'primeng/components/calendar/calendar';
-import { DialogModule } from 'primeng/components/dialog/dialog';
-import { AutoCompleteModule } from 'primeng/components/autocomplete/autocomplete';
+import { CalendarModule } from 'primeng/calendar';
+import { DialogModule } from 'primeng/dialog/dialog';
+import { AutoCompleteModule } from 'primeng/autocomplete/autocomplete';
 import {TabViewModule} from 'primeng/tabview';
 import { SliderModule } from 'primeng/slider';
 import {InputSwitchModule} from 'primeng/inputswitch';
@@ -90,7 +90,6 @@ import { CommonModule } from '@angular/common';
     DropdownModule,
     StepsModule,
     TabMenuModule,
-    DataTableModule,
     DataViewModule,
     CalendarModule,
     DialogModule,

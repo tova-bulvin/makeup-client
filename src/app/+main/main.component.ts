@@ -1,6 +1,6 @@
 import {Component, OnInit, ViewChild, ElementRef, AfterViewInit} from '@angular/core';
 import {MenuItem} from "primeng/primeng";
-import {Menu} from "primeng/components/menu/menu";
+import {Menu} from "primeng/menu/menu";
 import {ActivatedRoute, Router} from "@angular/router";
 import { LoginService } from '../services'
 import {TabMenuModule} from 'primeng/tabmenu';
