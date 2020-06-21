@@ -4,7 +4,7 @@ import { MessageService } from 'primeng/api/messageservice';
 import {ButtonModule} from 'primeng/button';
 import {ListboxModule} from 'primeng/listbox';
 import { CompanyDto } from '../models/dto/companyDto';
-import { MatchMakeUpDto } from '../models/dto/MatchMakeUpDto'
+import { MatchMakeUpDto } from '../models/dto'
 import { CompanyService } from '../services/company.service';
 import { createWiresService } from 'selenium-webdriver/firefox';
 import { CustomerService } from '../services/customer.service';

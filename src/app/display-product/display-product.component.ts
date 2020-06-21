@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductDto } from '../models/dto/productDto';
-import { MatchMakeUpDto } from '../models/dto/MatchMakeUpDto';
+import { MatchMakeUpDto } from '../models/dto';
 import { ActivatedRoute, Router, NavigationExtras } from '@angular/router';
 import {CardModule} from 'primeng/card';
 import {ButtonModule} from 'primeng/button';

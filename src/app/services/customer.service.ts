@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { BaseApiService } from "../shared";
 import { BaseHttpService } from "../shared/services";
 import { CompanyDto } from '../models/dto/companyDto';
-import { MatchMakeUpDto } from '../models/dto/MatchMakeUpDto';
+import { MatchMakeUpDto } from '../models/dto';
 import { Observable } from 'rxjs/Observable';
 import { RequestOptions, Http } from '@angular/http';
 import { HttpClient } from '@angular/common/http';
