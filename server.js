@@ -5,7 +5,11 @@ const path = require('path');
 const app = express();
 
 // Serve only the static files form the dist directory
-app.use(express.static(__dirname + '/dist/Client'));
+app.use(express.static(__dirname + '/dist/index.html'));
+
+app.get('*', (req, res) => {
+    res.sendFile(`./dist/index.html`); // load the single view file (angular will handle the page changes on the front-end)
+});
 
 app.get('/*', function(req,res) {
     
