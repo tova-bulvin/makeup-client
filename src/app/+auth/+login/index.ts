@@ -6,7 +6,6 @@ export * from './login.component';
 
 export const LOGIN_COMPONENTS =[
     LoginComponent,
-  
 ]
 
 

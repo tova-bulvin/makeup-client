@@ -8,3 +8,9 @@
     display: block;
     background-image: url("..\..\assets\images\GT001.jpg");
 }
+@media only screen and (max-width: 600px) {
+    .image{
+        background-image: url("..\..\assets\images\p1.jpg");
+        background-size:cover;
+    }
+}

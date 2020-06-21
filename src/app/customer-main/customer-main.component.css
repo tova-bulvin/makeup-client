@@ -17,6 +17,35 @@
 .image{
 
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: cover;
     background-image: url('../../assets/images/p1.jpg');
+    text-align: center;
 }
+.number{
+    border:3px solid black;
+    border-radius: 50% 50%;
+    margin:7px;
+    width:22px;
+    display: inline-block;
+    font-weight:700;
+    height: max-content;
+    background-color: antiquewhite;
+  }
+  .instruction{
+      background-color: white;
+      font-weight:600;
+  }
+  @media only screen and (max-width: 600px) {
+    .product{
+        display: none;
+    }
+    
+    .divImg{
+        width:95%;
+        margin-bottom: 10px;
+    }
+    .instruction{
+        display: flex;
+    }
+  }
+    

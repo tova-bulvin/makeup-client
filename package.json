@@ -29,6 +29,7 @@
     "angular2-toaster": "^8.0.0",
     "autocomplete": "0.0.1",
     "boostrap": "^2.0.0",
+    "bootstrap": "^4.5.0",
     "chart.js": "^2.9.3",
     "core-js": "^3.6.5",
     "dialog": "^0.3.1",
