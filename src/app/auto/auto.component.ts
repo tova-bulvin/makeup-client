@@ -19,6 +19,7 @@ export class AutoComponent implements OnInit {
   currentUser:UserDto;
   typePassword:string;
   msgs:any=[];
+  flagErr:boolean;
 
   constructor(private router: Router, private loginService: LoginService) {
       this.typePassword="password"
@@ -40,23 +41,42 @@ export class AutoComponent implements OnInit {
   back(){
     this.router.navigateByUrl('/main-menu')
   }
-  
+  onchangeName(){
+    
+  }
+  onchangePassword(){
+
+  }
   login() {
-    this.loginService.login(this.userName, this.password).subscribe(
-      (data: UserDto) => {
-        this.currentUser = data; 
-        this.loginService.setCurrentUser(data);
-        this.loginSucceed = this.currentUser.isAuthorized;    
-        if (this.currentUser.isAuthorized) {
-            this.router.navigateByUrl("/admin-main");
-        }
-      },
-      fail =>{ 
+    this.flagErr=false;
+    if(this.userName==undefined||this.userName==""||this.userName.length<4){
+      this.msgs=[];
+      this.msgs.push({severity:'error', summary:'error', detail:'User name incorrect'});
+      this.flagErr=true;
+    }
+    if(this.password==undefined||this.password==""||this.password.length<9){
+      if(!this.flagErr)
         this.msgs=[];
-        this.msgs.push({severity:'error', summary:'error', detail:'User not found'});
-        //alert("User not found")
-        
-      }); 
+      this.msgs.push({severity:'error', summary:'error', detail:'Password incorrect'});
+    }
+    else{
+      this.msgs=[];
+      this.loginService.login(this.userName, this.password).subscribe(
+        (data: UserDto) => {
+          this.currentUser = data; 
+          this.loginService.setCurrentUser(data);
+          this.loginSucceed = this.currentUser.isAuthorized;    
+          if (this.currentUser.isAuthorized) {
+              this.router.navigateByUrl("/admin-main");
+          }
+        },
+        fail =>{ 
+          this.msgs=[];
+          this.msgs.push({severity:'error', summary:'error', detail:'User not found'});
+          //alert("User not found")
+          
+        }); 
+    }
   }
 
 }

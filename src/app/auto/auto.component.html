@@ -6,7 +6,7 @@
     <div style="text-align: center;">
       <span class="ui-float-label">
           <span class="ui-inputgroup-addon"><i class="fa fa-user"></i></span>
-          <input type="text" size="30" placeholder="user name" pInputText [(ngModel)]="userName">
+          <input type="text" maxlength="10" minlength="4" size="10" required placeholder="user name" (change)="onchangeName()" pInputText [(ngModel)]="userName">
 
       </span>
     </div>
@@ -15,7 +15,7 @@
       <span class="ui-float-label">
 
           <span class="ui-inputgroup-addon"><i (mouseover)="mouseOverPassword()" (mouseout)="mouseLeavePassword()" class="fa fa-eye"></i></span>
-          <input type="{{typePassword}}" size="30" placeholder="password" pInputText [(ngModel)]="password">
+          <input type="{{typePassword}}" maxlength="9" minlength="9" required size="9" (change)="onchangePassword()" placeholder="password" pInputText [(ngModel)]="password">
       
         </span>
     </div>
