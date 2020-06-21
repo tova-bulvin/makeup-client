@@ -4,7 +4,6 @@ import { CompanyService } from '../services/company.service';
 import { NavigationExtras, Router } from '@angular/router';
 import {ButtonModule} from 'primeng/button';
 import {TableModule} from 'primeng/table';
-import{DataTableModule} from 'primeng/primeng'
 import{FormGroup, FormControl, Validators} from "@angular/forms"
 
 @Component({

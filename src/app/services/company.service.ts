@@ -5,7 +5,6 @@ import { BaseHttpService } from "../shared/services";
 import { CompanyDto } from '../models/dto/companyDto';
 import { Observable } from 'rxjs/Observable';
 import { ProductDto } from '../models/dto/productDto';
-import { equalParamsAndUrlSegments } from '@angular/router/src/router_state';
 
 
 @Injectable()

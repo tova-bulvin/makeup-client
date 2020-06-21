@@ -6,15 +6,27 @@ import { HttpClientModule } from '@angular/common/http';
 
 //prime-ng
 import { KeyFilterModule } from 'primeng/keyfilter';
-import { CheckboxModule, MenuModule, ContextMenuModule, ButtonModule, PanelModule, InputTextModule, DropdownModule, StepsModule,SpinnerModule, TabMenuModule, FileUploadModule, RadioButtonModule, InputMaskModule,
-    ProgressSpinnerModule, LightboxModule,ListboxModule
-} from 'primeng/primeng'
+import {TabMenuModule} from 'primeng/tabmenu';
 import { CardModule } from 'primeng/card';
+import {MenuModule} from 'primeng/menu';
+import {ContextMenuModule} from 'primeng/contextmenu';
+import {PanelModule} from 'primeng/panel';
+import {InputTextModule} from 'primeng/inputtext';
+import {DropdownModule} from 'primeng/dropdown';
+import {StepsModule} from 'primeng/steps';
+import {SpinnerModule} from 'primeng/spinner';
+import {FileUploadModule} from 'primeng/fileupload';
+import {ProgressSpinnerModule} from 'primeng/progressspinner';
+import {LightboxModule} from 'primeng/lightbox';
+import {ListboxModule} from 'primeng/listbox';
+import {RadioButtonModule} from 'primeng/radiobutton';
+import {InputMaskModule} from 'primeng/inputmask';
+import {ButtonModule} from 'primeng/button';
+
 
 //app components
 import { AppComponent } from './app.component';
 import { MAIN_COMPONENTS } from './+main';
-import { SHARED_COMPONENTS } from '../app/shared/uix/components/index'
 import {AUTH_COMPONENTS} from './+auth';
 
 //app modules
@@ -25,8 +37,6 @@ import {MessagesModule} from 'primeng/messages';
 import {MessageModule} from 'primeng/message';
 import {DataViewModule} from 'primeng/dataview';
 import { CalendarModule } from 'primeng/calendar';
-import { DialogModule } from 'primeng/dialog/dialog';
-import { AutoCompleteModule } from 'primeng/autocomplete/autocomplete';
 import {TabViewModule} from 'primeng/tabview';
 import { SliderModule } from 'primeng/slider';
 import {InputSwitchModule} from 'primeng/inputswitch';
@@ -40,7 +50,7 @@ import { CompanyService } from './services/company.service';
 import { ProductService } from './services/product.service';
 import { CustomerService } from './services/customer.service';
 import { DisplayPrintService } from './services/display-print.service';
-import { PaginatorModule } from 'primeng/primeng';
+import { PaginatorModule } from 'primeng/paginator';
 import { CustomerMainComponent } from './customer-main/customer-main.component';
 import { DisplayProductComponent } from './display-product/display-product.component';
 import { PrintProductComponent } from './print-product/print-product.component'; // Here
@@ -55,7 +65,6 @@ import { CommonModule } from '@angular/common';
     //app components
     AppComponent,
     ...MAIN_COMPONENTS,
-    ...SHARED_COMPONENTS,
     ...AUTH_COMPONENTS,
     HomeComponent,
     AutoComponent,
@@ -81,7 +90,6 @@ import { CommonModule } from '@angular/common';
 
     //prime-ng modules
     MenuModule,
-    CheckboxModule,
     ContextMenuModule,
     ButtonModule,
     PanelModule,
@@ -92,8 +100,6 @@ import { CommonModule } from '@angular/common';
     TabMenuModule,
     DataViewModule,
     CalendarModule,
-    DialogModule,
-    AutoCompleteModule,
     MessagesModule,
     MessageModule,
     KeyFilterModule,

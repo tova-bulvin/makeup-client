@@ -1,10 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductDto } from '../models/dto/productDto';
-import {ButtonModule} from 'primeng/button';
 import { ProductService } from '../services/product.service';
 import { NavigationExtras, Route, Router } from '@angular/router';
-import {TableModule} from 'primeng/table';
-import{DataTableModule} from 'primeng/primeng'
 
 @Component({
   selector: 'app-product',

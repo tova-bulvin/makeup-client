@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {TabMenuModule} from 'primeng/tabmenu';
-import { MenuItem } from 'primeng/primeng';
+import { MenuItem } from 'primeng/api/menuitem';
 
 
 

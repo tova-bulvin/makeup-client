@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import {FileUploadModule} from 'primeng/fileupload'
-import { MessageService } from 'primeng/components/common/messageservice';
+import { MessageService } from 'primeng/api/messageservice';
 import {ButtonModule} from 'primeng/button';
 import {ListboxModule} from 'primeng/listbox';
 import { CompanyDto } from '../models/dto/companyDto';
