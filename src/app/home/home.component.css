@@ -7,6 +7,13 @@
     display: block;
     background-image: url("..\..\assets\images\GT001.jpg");
 }
+.wrapper{
+    background-color: white;
+    font-family:sans-serif;
+}
+.wrapper>h2{
+    font-weight: bold;
+}
 @media only screen and (max-width: 600px) {
     .image{
         background-image: url("..\..\assets\images\p1.jpg");
