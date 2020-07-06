@@ -77,11 +77,6 @@
   "engines": {
     "node": "~12.9.0",
     "npm": "6.10.2"
-  },
-  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
-  "repository" : {
-    "type" : "git",
-    "url": "ssh://git@github.com/tova-bulvin/makeup-client.git",
-    "directory": "packages/name"
   }
+  
 }
