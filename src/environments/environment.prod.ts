@@ -4,7 +4,7 @@ export const environment = {
 	
 	apiServer: {
 		useHttps: true,
-		serverUrl: 'makeup4u.herokuapp.com',
+		serverUrl: 'makeup4userver.somee.com',
 		fullAddress: function() {
 			let protocol = environment.apiServer.useHttps ? 'https' : 'http';
 			let address = environment.apiServer.serverUrl;
