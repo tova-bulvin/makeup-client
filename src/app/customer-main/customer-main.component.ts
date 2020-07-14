@@ -58,7 +58,7 @@ export class CustomerMainComponent implements OnInit {
       });
   }
  
-  changeName(event) {  
+  changeName(event) {
     if (event.target.files.length === 0)
       return;
     this.myFile = event.target.files[0];
@@ -69,7 +69,6 @@ export class CustomerMainComponent implements OnInit {
       alert("קובץ זה אינו נתמך. נא לבחור בקובץ תמונה");
       return;
     }
-    
     
     this.fileName=this.myFile.name;
     var reader = new FileReader();
