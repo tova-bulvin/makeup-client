@@ -5,16 +5,18 @@
 
 
 export const environment = {
-  production: false,
-  development: true,
-	
-	apiServer: {
-		useHttps: false,
-		serverUrl: 'makeup4userver.somee.com',
-		fullAddress: function() {
-			let protocol = environment.apiServer.useHttps ? 'https' : 'http';
-			let address = environment.apiServer.serverUrl;
-			return `${protocol}://${address}/`;
-		}
-	},
-};
+	production: false,
+	development: true,
+	  
+	  apiServer: {
+		  useHttps: false,
+		  serverUrl: 'makeup4userver.somee.com',
+		  fullAddress: function() {
+			  let protocol = environment.apiServer.useHttps ? 'https' : 'http';
+			  let address = environment.apiServer.serverUrl;
+	  
+			  return `${protocol}://${address}/`;
+		  }
+	  },
+  };
+  
