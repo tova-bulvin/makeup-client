@@ -8,9 +8,6 @@ const app = express();
 app.use(express.static(__dirname + '/dist/'));
 
 app.get('/*', function(req,res) {
-    if (req.headers['x-forwarded-proto'] != 'http'){
-        res.redirect('http://' + req.hostname + req.url);
-    } 
     res.sendFile(path.join(__dirname+'/dist/index.html'));
 });
 
