@@ -9,7 +9,7 @@ export const environment = {
 	development: true,
 	  
 	  apiServer: {
-		  useHttps: false,
+		  useHttps: true,
 		  serverUrl: 'makeup4userver.somee.com',
 		  fullAddress: function() {
 			  let protocol = environment.apiServer.useHttps ? 'https' : 'http';
