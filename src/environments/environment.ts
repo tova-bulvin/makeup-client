@@ -10,7 +10,7 @@ export const environment = {
 	  
 	  apiServer: {
 		  useHttps: false,
-		  serverUrl: 'localhost:52718',
+		  serverUrl: 'makeup4userver.somee.com',
 		  fullAddress: function() {
 			  let protocol = environment.apiServer.useHttps ? 'https' : 'http';
 			  let address = environment.apiServer.serverUrl;
