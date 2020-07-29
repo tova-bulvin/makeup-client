@@ -10,13 +10,49 @@
 .wrapper{
     background-color: white;
     font-family:sans-serif;
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    width: 70%;
 }
 .wrapper>h2{
+    font-size: 60px;
+}
+.wrapper>h1{
     font-weight: bold;
+}
+.start{
+    background-color: #F3DFC7;
+    border:0.02px solid black;
+    border-radius: 45px;
+    width:20%;
+    height:7%;
+    font-size: 25px;
+    font-weight: 600;
+    text-align: center;
+    color: black !important;
+    padding-top:25px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+}
+.center-div{
+    background-color: white;
+    margin: auto;
+    display: block;
+    padding: 20px 0 20px 0;
 }
 @media only screen and (max-width: 600px) {
     .image{
         background-image: url("..\..\assets\images\p1.jpg");
         background-size:cover;
+    }
+    .start{
+        font-size: 20px;
+        padding-top:15px;
+        width: 70%;
+    }
+    .wrapper>h2{
+        font-size: 40px;
     }
 }
