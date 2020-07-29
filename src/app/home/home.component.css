@@ -6,6 +6,7 @@
     background-size: 100% 100%;
     display: block;
     background-image: url("..\..\assets\images\GT001.jpg");
+    background-attachment: fixed;
 }
 .wrapper{
     background-color: white;
@@ -27,7 +28,7 @@
     border-radius: 45px;
     width:20%;
     height:7%;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 600;
     text-align: center;
     color: black !important;
@@ -46,6 +47,8 @@
     .image{
         background-image: url("..\..\assets\images\p1.jpg");
         background-size:cover;
+        background-attachment:local;
+        height:100%
     }
     .start{
         font-size: 20px;
