@@ -114,10 +114,6 @@ export class CustomerMainComponent implements OnInit {
             }//if det
             else
             {
-              if(this.matchMakeUpDtoRes.images){
-                this.blockedDocument = false,
-                alert(this.matchMakeUpDto.images[0])
-              }
               this.blockedDocument = false,
               alert( "problem occured in server");
             }//else
