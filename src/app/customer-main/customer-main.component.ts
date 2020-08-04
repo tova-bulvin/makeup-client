@@ -108,12 +108,16 @@ export class CustomerMainComponent implements OnInit {
         (data: MatchMakeUpDto) => {
           this.matchMakeUpDtoRes = data; 
           if(this.matchMakeUpDtoRes){
-            if(this.matchMakeUpDtoRes.details &&this.matchMakeUpDtoRes.images){
+            if(this.matchMakeUpDtoRes.details && this.matchMakeUpDtoRes.images){
               let navigationExtras: NavigationExtras =this.parseToString();
               this.router.navigate(["display"], navigationExtras);
             }//if det
             else
             {
+              if(this.matchMakeUpDtoRes.images){
+                this.blockedDocument = false,
+                alert(this.matchMakeUpDto.images[0])
+              }
               this.blockedDocument = false,
               alert( "problem occured in server");
             }//else
