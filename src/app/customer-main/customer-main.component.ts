@@ -14,6 +14,7 @@ import { NavigationExtras, Router, ActivatedRoute } from '@angular/router';
 import {BlockUIModule} from 'primeng/blockui';
 import { FormGroup, FormBuilder } from '@angular/forms';
 
+
 class ImageSnippet {
   constructor(public src: string, public file: File) {}
 }
@@ -32,9 +33,7 @@ export class CustomerMainComponent implements OnInit {
   matchMakeUpDtoRes:MatchMakeUpDto;
   blockedDocument: boolean = false;
   fileName:string;
-  fileType:string;
   myFile:File;
-  url: any;
   file: any;
   uploadForm: FormGroup;
 
@@ -76,7 +75,8 @@ export class CustomerMainComponent implements OnInit {
     reader.onload = (_event) => {
       this.imgURL = reader.result;
     }
-    
+
+     
   }
   
   

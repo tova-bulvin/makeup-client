@@ -35,6 +35,11 @@ export class CustomerService extends BaseApiService{
     return this.baseHttpService.post<MatchMakeUpDto>(url,matchMakeUpDto);
   
  }
+//try
+ sendImage(formData){
+    let url = this.actionUrl('sendImage');
+    this.baseHttpService.post(url,formData);
+ }
 
  sendMail(mail:string,massege:string): Observable<void> {
    
