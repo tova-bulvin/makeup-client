@@ -23,7 +23,7 @@
             <label>company-name: </label><span>{{matchMakeUpDto.details[0].company.name}}</span><br/>
         </div>
         <p-footer>
-            <button pButton type="button" label="Choose" (click)="choose(0)" icon="pi pi-shopping-cart" class="ui-button-rounded ui-button-secondary" style="margin-right: .25em"></button>
+            <button pButton type="button" label="Choose" (click)="choose(0)" icon="pi pi-shopping-cart" class="btn" style="margin-right: .25em"></button>
         </p-footer>
     </p-card>
 
@@ -41,7 +41,7 @@
                 <label>company-name: </label><span>{{matchMakeUpDto.details[1].company.name}}</span><br/>
         </div>
         <p-footer>
-            <button pButton type="button" (click)="choose(1)" label="Choose" class="ui-button-rounded ui-button-secondary" icon="pi pi-shopping-cart" style="margin-right: .25em"></button>
+            <button pButton type="button" (click)="choose(1)" label="Choose" class="btn" icon="pi pi-shopping-cart" style="margin-right: .25em"></button>
         </p-footer>
         </p-card>
 
@@ -61,7 +61,7 @@
             </div>
 
             <p-footer>
-                <button pButton type="button" (click)="choose(2)" label="Choose" class="ui-button-rounded ui-button-secondary" icon="pi pi-shopping-cart" style="margin-right: .25em"></button>
+                <button pButton type="button" (click)="choose(2)" label="Choose" class="btn" icon="pi pi-shopping-cart" style="margin-right: .25em"></button>
             </p-footer>
             
         </p-card>
@@ -69,8 +69,8 @@
         <footer  style=" text-align: center">
                 <span style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;font-weight: bold;width:50px">you choose picture number: {{numChoose}}</span>
                 <br/>
-                <button pButton type="button" (click)="print()" label="Save" class="ui-button-rounded ui-button-secondary" icon="pi pi-check" style="margin-right: .25em"></button>
-                <button pButton type="button" (click)="back()" label="Back" class="ui-button-rounded ui-button-secondary" icon="pi pi-chevron-circle-right" style="margin-right: .25em" ></button>
+                <button pButton type="button" (click)="print()" label="Save" class="btn" icon="pi pi-check" style="margin-right: .25em"></button>
+                <button pButton type="button" (click)="back()" label="Back" class="btn" icon="pi pi-chevron-circle-right" style="margin-right: .25em" ></button>
         </footer>
     </div>
 </div>

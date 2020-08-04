@@ -40,6 +40,9 @@ import { CalendarModule } from 'primeng/calendar';
 import {TabViewModule} from 'primeng/tabview';
 import { SliderModule } from 'primeng/slider';
 import {InputSwitchModule} from 'primeng/inputswitch';
+
+//my components
+import {HeaderTopComponent} from './header/header.component'
 import { HomeComponent } from './home/home.component';
 import { AutoComponent } from './auto/auto.component';
 import { CompanyComponent } from './company/company.component';
@@ -66,6 +69,7 @@ import { CommonModule } from '@angular/common';
     AppComponent,
     ...MAIN_COMPONENTS,
     ...AUTH_COMPONENTS,
+    HeaderTopComponent,
     HomeComponent,
     AutoComponent,
     CompanyComponent,

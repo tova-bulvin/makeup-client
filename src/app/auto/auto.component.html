@@ -4,25 +4,23 @@
   <div class="main_div">
     <h1>Login</h1>
     <div style="text-align: center;">
-      <span class="ui-float-label">
-          <span class="ui-inputgroup-addon"><i class="fa fa-user"></i></span>
+      <span class="p-inputgroup">
+          <span class="p-inputgroup-addon"><i class="fa fa-user"></i></span>
           <input type="text" maxlength="10" minlength="4" size="10" required placeholder="user name" (change)="onchangeName()" pInputText [(ngModel)]="userName">
 
       </span>
     </div>
     <br>
     <div style="text-align: center">
-      <span class="ui-float-label">
-
-          <span class="ui-inputgroup-addon"><i (mouseover)="mouseOverPassword()" (mouseout)="mouseLeavePassword()" class="fa fa-eye"></i></span>
+      <span class="p-inputgroup">
+          <span class="p-inputgroup-addon"><i (mouseover)="mouseOverPassword()" (mouseout)="mouseLeavePassword()" class="fa fa-eye"></i></span>
           <input type="{{typePassword}}" maxlength="9" minlength="9" required size="9" (change)="onchangePassword()" placeholder="password" pInputText [(ngModel)]="password">
-      
-        </span>
+      </span>
     </div>
     <br/>
-    <div style="text-align: center" class="ui-float-label">
-        <button pButton type="button" (click)="login()" label="login" class="ui-button-rounded ui-button-secondary" ></button>
-        <button pButton type="button" icon="pi pi-bars"  (click)="back()" label="Back menu" class="ui-button-rounded ui-button-secondary"></button>
+    <div style="text-align: center" class="p-inputgroup">
+        <button pButton type="button" (click)="login()" label="login" class="btn" ></button>
+        <button pButton type="button" icon="pi pi-bars"  (click)="back()" label="Back menu" class="btn"></button>
     </div>
   </div>
   <br>

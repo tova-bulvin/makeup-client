@@ -31,6 +31,11 @@
     height: max-content;
     background-color: antiquewhite;
   }
+  button{
+    background-color: #F3DFC7;
+    color:black !important;
+    border:1px solid black;
+  }
   .instruction{
       background-color: white;
       font-weight:600;
