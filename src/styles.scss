@@ -79,4 +79,15 @@ button{
   color:black !important;
   border:1px solid black  !important;
 }
-  
+.image{
+  background-size: contain;
+  height:1000px;
+}
+@media only screen and (max-width: 600px) {
+  .image{
+      background-image: url("..\..\assets\images\p1.jpg");
+      background-size:cover;
+      background-attachment:local;
+      height:100%
+  }
+}

@@ -3,7 +3,7 @@
 }
 .image{
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: 100% 100% !important;
     display: block;
     background-image: url("..\..\assets\images\GT001.jpg");
     background-attachment: fixed;
