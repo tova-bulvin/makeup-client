@@ -36,6 +36,7 @@ export class CustomerMainComponent implements OnInit {
   myFile:File;
   file: any;
   uploadForm: FormGroup;
+  alert:string;
 
 
   constructor(private companyService:CompanyService,private customerService:CustomerService,private router: Router, private formBuilder: FormBuilder) {
@@ -45,7 +46,7 @@ export class CustomerMainComponent implements OnInit {
         this.companies = data; 
       },
       fail => {
-        alert("problem with load companies list"),
+        this.alert="problem with load companies list",
         this.blockedDocument=false;
       });
 
@@ -65,7 +66,7 @@ export class CustomerMainComponent implements OnInit {
     var mimeType = this.myFile.type;
     
     if (mimeType.match(/image\/*/) == null) {
-      alert("קובץ זה אינו נתמך. נא לבחור בקובץ תמונה");
+      this.alert=("קובץ זה אינו נתמך. נא לבחור בקובץ תמונה");
       return;
     }
     
@@ -85,13 +86,13 @@ export class CustomerMainComponent implements OnInit {
     var companiesName=[];
     if(this.selectedCompanies==undefined)
     {
-      alert("no companies choosen, choose and try again");
+      this.alert=("no companies choosen, choose and try again");
       this.blockedDocument=false;
       return;
     }//if
     if(this.selectedCompanies.length<=0)
     {
-      alert("no companies choosen, choose and try again");
+      this.alert=("no companies choosen, choose and try again");
       this.blockedDocument=false;
       return;
     }
@@ -101,6 +102,7 @@ export class CustomerMainComponent implements OnInit {
     }//for
     if(this.uploadForm.get('profile').value)
     {
+      this.alert="";
       let frmData = new FormData();
       frmData.append("img", this.uploadForm.get('profile').value);    
       var companiesNameJson=JSON.stringify(companiesName);
@@ -115,19 +117,19 @@ export class CustomerMainComponent implements OnInit {
             else
             {
               this.blockedDocument = false,
-              alert( "problem occured in server");
+              this.alert=( "problem occured in server");
             }//else
           }//if res
           else
           {
             this.blockedDocument = false,
-            alert( "problem occured in server");
+            this.alert=( "problem occured in server");
           }//else
         }//data
       )//subscribe
     }//if get profile
     else{
-      alert("you don't choose file, choose and try again");
+      this.alert=("you don't choose file, choose and try again");
       this.blockedDocument=false;
       return;
     }//else

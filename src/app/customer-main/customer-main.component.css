@@ -13,6 +13,8 @@
     display: inline-block; 
     margin-left: 5%;
     margin-right: 5%;
+    position: absolute;
+    margin-top: 0px;
 }
 .image{
 
@@ -40,7 +42,23 @@
       background-color: white;
       font-weight:600;
   }
+  .insruct-image{
+      display:block;
+      width: 80%;
+      margin: auto;
+      margin-top: 25%;
+  }
+ .alert{
+    margin: auto;
+    margin-top: 10px;
+    display: block;
+    width: 40%;
+    font-weight: bold;
+  }
   @media only screen and (max-width: 600px) {
+    .alert{
+        width: 100%;
+    }
     .product{
         display: none;
     }
@@ -54,6 +72,9 @@
     }
     .number{
         width:40px;
+    }
+    .divListBox{
+        position: relative;
     }
   }
     
