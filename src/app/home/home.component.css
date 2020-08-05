@@ -42,6 +42,14 @@
     display: block;
     padding: 20px 0 20px 0;
 }
+footer{
+    background-color: white;
+    text-align: center;
+    height: 70px;
+    font-weight:600;
+    padding-top: 5px;
+}
+
 @media only screen and (max-width: 600px) {
     .image{
         background-image: url("..\..\assets\images\p1.jpg");

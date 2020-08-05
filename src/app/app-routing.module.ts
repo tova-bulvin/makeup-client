@@ -20,8 +20,7 @@ import { PrintProductComponent } from './print-product/print-product.component';
 const APP_ROUTES: Routes = [
     {
         path:'home',
-        component:AppComponent,
-    
+        component:HomeComponent,
        
     },
     {
