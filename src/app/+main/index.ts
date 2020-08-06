@@ -4,6 +4,7 @@ import { CompanyComponent } from '../company/company.component';
 import { ProductComponent } from '../product/product.component';
 import { EditCompanyComponent } from '../edit-company/edit-company.component';
 import { EditProductComponent } from '../edit-product/edit-product.component';
+import{HeaderTopComponent} from "../header/header.component"
 
 
 
