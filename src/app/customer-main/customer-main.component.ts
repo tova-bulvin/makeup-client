@@ -117,13 +117,13 @@ export class CustomerMainComponent implements OnInit {
             else
             {
               this.blockedDocument = false,
-              this.alert=( "problem occured in server");
+              this.alert=( "problem occured in server, please try later");
             }//else
           }//if res
           else
           {
             this.blockedDocument = false,
-            this.alert=( "problem occured in server");
+            this.alert=( "problem occured in server , please try later");
           }//else
         }//data
       )//subscribe
