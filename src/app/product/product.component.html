@@ -1,36 +1,65 @@
-<div  class="image" >
+<div>
   <br>
   <div style="text-align: center">
     <h1>product list</h1>
-    <p-table  #dt  class="first" [value]="listProducts" [paginator]="true" [rows]="10">
-          
+    <p-table  #dt  styleClass="p-datatable-responsive-demo" [value]="listProducts" [paginator]="true" [rows]="10">
         <ng-template pTemplate="header">
             <tr>
-              <th >id</th>
-              <th >companyName</th> 
-              <th >codeInCompany</th>
+              <th >Id</th>
+              <th >Company Name</th> 
+              <th >Code In Company</th>
               <th>R</th>
               <th> G</th>
               <th> B</th>
-              <th> price</th>
-              <th> description</th> 
-              <th ></th>
+              <th> Price</th>
+              <th> Description</th> 
+              <th></th>
               <th ></th>
             </tr>
         </ng-template>
 
         <ng-template pTemplate="body" let-product>
           <tr>
-            <td >{{product.id}}</td>
-            <td> {{product.company.name}}</td> 
-            <td> {{product.codeInCompany}}</td> 
-            <td> {{product.r}}</td> 
-            <td> {{product.g}}</td> 
-            <td> {{product.b}}</td> 
-            <td> {{product.price}}</td> 
-            <td> {{product.description}}</td> 
-            <td><i class="fa fa-edit"></i><a (click)="edit(product)">edit</a></td>
-            <td><i class="fa fa-trash"></i> <a (click)="deleteProduct(product.id)">delete</a></td> 
+            <td>
+              <span class="p-column-title">Id</span>
+              {{product.id}}
+            </td>
+            <td> 
+              <span class="p-column-title">Company Name</span>
+              {{product.company.name}}
+            </td> 
+            <td>
+              <span class="p-column-title">Code In Company</span>
+               {{product.codeInCompany}}
+            </td> 
+            <td>
+              <span class="p-column-title">R</span>
+               {{product.r}}
+            </td> 
+            <td>
+              <span class="p-column-title">G</span>
+              {{product.g}}
+            </td> 
+            <td>
+              <span class="p-column-title">B</span>
+               {{product.b}}
+            </td> 
+            <td>
+              <span class="p-column-title">Price</span>
+               {{product.price}}
+            </td> 
+            <td>
+              <span class="p-column-title">Description</span>
+               {{product.description}}
+            </td> 
+            <td>
+              <i class="fa fa-edit"></i>
+              <a (click)="edit(product)">edit</a>
+            </td>
+            <td>
+              <i class="fa fa-trash"></i> 
+              <a (click)="deleteProduct(product.id)">delete</a>
+            </td> 
            </tr>      
         </ng-template>
     </p-table>

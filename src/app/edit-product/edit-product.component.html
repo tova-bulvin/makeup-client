@@ -1,35 +1,35 @@
-<div  class="image" >
+<div >
         <br>
         <div class="main_div">
                 <h1>add/edit product</h1>
                 <form [formGroup]="form" style="text-align: center" novalidate>
                         <label>id </label><br><input readonly placeholder="id" pInputText formControlName="id"/><br><br>
-                        <div style="margin-left:28%">
+                        <div class="wrap-list-box">
                                 <p-listbox [options]="listCompanies" formControlName="company" checkbox="checkbox"  optionLabel="name" >
                                         <p-header>
                                         company-name
                                         </p-header>
                                 </p-listbox>
                         </div><br/>
-                        <label>code-in-company </label>
+                        <label>code-in-company</label>
                         <br>
-                        <input type=text placeholder="code in company" pInputText formControlName="codeInCompany"[ngClass]="{'fail':form.controls.codeInCompany.invalid &&form.controls.codeInCompany.dirty}"/>
+                        <input type=text pTooltip="Enter code in company" tooltipEvent="focus" placeholder="code in company" pInputText formControlName="codeInCompany"[ngClass]="{'fail':form.controls.codeInCompany.invalid &&form.controls.codeInCompany.dirty}"/>
                         <br><br>
                         <label>r </label><br>
-                        <input type=text  placeholder="R" pInputText formControlName="r" [ngClass]="{'fail':form.controls.r.invalid &&form.controls.r.dirty}"/>
+                        <input type=text  placeholder="R" pTooltip="Enter R of makeup color by 3 digits" tooltipEvent="focus" pInputText formControlName="r" [ngClass]="{'fail':form.controls.r.invalid &&form.controls.r.dirty}"/>
                         <br><br>
                         <label>g </label>
                         <br>
-                        <input type=text  placeholder="G" pInputText formControlName="g" [ngClass]="{'fail':form.controls.g.invalid &&form.controls.g.dirty}"/>
+                        <input type=text  placeholder="G" pTooltip="Enter G of makeup color by 3 digits" tooltipEvent="focus" pInputText formControlName="g" [ngClass]="{'fail':form.controls.g.invalid &&form.controls.g.dirty}"/>
                         <br><br>
                         <label>b </label>
                         <br>
-                        <input type=text  placeholder="B" pInputText formControlName="b" [ngClass]="{'fail':form.controls.b.invalid &&form.controls.b.dirty}"/>
+                        <input type=text  placeholder="B" pTooltip="Enter B of makeup color by 3 digits" tooltipEvent="focus" pInputText formControlName="b" [ngClass]="{'fail':form.controls.b.invalid &&form.controls.b.dirty}"/>
                         <br><br>
                         <label>price </label><br>
-                        <input type=text  placeholder="price" pInputText formControlName="price" [ngClass]="{'fail':form.controls.price.invalid &&form.controls.price.dirty}"/><br><br>
+                        <input type=text  placeholder="price" pTooltip="Enter price" pInputText formControlName="price" tooltipEvent="focus" [ngClass]="{'fail':form.controls.price.invalid &&form.controls.price.dirty}"/><br><br>
                         <label>description </label><br>
-                        <input type=text  placeholder="description" pInputText formControlName="description" [ngClass]="{'fail':form.controls.price.invalid &&form.controls.price.dirty}"/><br><br>
+                        <input type=text  placeholder="description" pTooltip="Enter short description" tooltipEvent="focus" pInputText formControlName="description" [ngClass]="{'fail':form.controls.price.invalid &&form.controls.price.dirty}"/><br><br>
                         
                         <div style="text-align: center">
                                 <button pButton type="button" (click)="saveProduct()"  icon="pi pi-check-circle"  label="ok" class="btn"></button>

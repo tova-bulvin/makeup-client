@@ -5,14 +5,6 @@
 .logoDiv{
   background-image: url("../../assets/images/logo.png")
 }
-.image{
-
-  background-image: url('../../assets/images/p1.jpg');
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  display:block;
-  height: 1000px;
-}
 
 .fail{
   border: 1px solid red; 
@@ -25,9 +17,21 @@
   text-align: center;
   background-color: white;
   padding-top: 15px;
-    
+  border:1px solid black;
 }
 label,p-header{
   font-weight: 700;
   font-size: 15px;
+}
+.wrap-list-box{
+  margin-left:30%;
+}
+@media only screen and (max-width: 600px) {
+  .main_div{
+    width:100%;
+    border: none;
+  }
+  .wrap-list-box{
+    margin-left:26%;
+  }
 }

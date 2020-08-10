@@ -20,7 +20,7 @@ export class AutoComponent implements OnInit {
   typePassword:string;
   msgs:any=[];
   flagErr:boolean;
-
+  iconPassword="-slash"
   constructor(private router: Router, private loginService: LoginService) {
       this.typePassword="password"
   }
@@ -31,11 +31,13 @@ export class AutoComponent implements OnInit {
   mouseOverPassword()
   {
     this.typePassword="text";
+    this.iconPassword="";
   }
 
   mouseLeavePassword()
   {
     this.typePassword="password";
+    this.iconPassword="-slash";
   }
 
   back(){

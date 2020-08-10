@@ -1,8 +1,8 @@
-<div class="image" >
+<div>
   <br>
   <div style="text-align: center">
-    <h1>company list</h1>
-    <p-table class="first" [value]="listCompanies" [paginator]="true" [rows]="10">
+    <h1>Company list</h1>
+    <p-table class="first" styleClass="p-datatable-responsive-demo" [value]="listCompanies" [paginator]="true" [rows]="10">
         <ng-template pTemplate="header">
           <tr>
             <th >id</th>
@@ -13,8 +13,14 @@
         </ng-template>
         <ng-template pTemplate="body" let-company>
           <tr>
-            <td >{{company.id}}</td>
-            <td> {{company.name}}</td> 
+            <td>
+              <span class="p-column-title">Id</span>
+              {{company.id}}
+            </td>
+            <td> 
+              <span class="p-column-title">Company</span>
+              {{company.name}}
+            </td> 
             <td><i class="fa fa-edit"></i><a (click)="edit(company)">edit</a></td>
             <td><i class="fa fa-trash"></i><a (click)="deleteCompany(company.id)">delete</a></td>
           </tr>      

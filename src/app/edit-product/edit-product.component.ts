@@ -7,6 +7,7 @@ import { CompanyDto } from '../models/dto/companyDto';
 import { CompanyService } from '../services/company.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 
+
 @Component({
   selector: 'app-edit-product',
   templateUrl: './edit-product.component.html',

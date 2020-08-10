@@ -53,7 +53,7 @@ footer{
 @media only screen and (max-width: 600px) {
     .image{
         background-image: url("..\..\assets\images\p1.jpg");
-        background-size:cover;
+        background-size:cover !important;
         background-attachment:local;
         height:100%
     }

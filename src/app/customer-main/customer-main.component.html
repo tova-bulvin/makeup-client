@@ -24,14 +24,14 @@
     <br>
     <div style="text-align:center ">
       <div  class="divImg">
-        <div *ngIf="!imgURL" class="insruct-image">For a precise fit, please upload a picture that is as clear and high-quality as possible, showing only your face</div>
+        <div *ngIf="!imgURL" class="insruct-image">For a precise fit, Please upload a picture that is as clear and high-quality as possible, Showing only your face</div>
         <img [src]="imgURL" height="100%" width="100%"  *ngIf="imgURL" #upImg>
       </div>
 
       <div class="divListBox">
           <p-listbox [options]="companies" [(ngModel)]="selectedCompanies" multiple="multiple" checkbox="checkbox" filter="filter" optionLabel="name">
               <p-header>
-                company
+                companies list
               </p-header>
             </p-listbox>
       </div>

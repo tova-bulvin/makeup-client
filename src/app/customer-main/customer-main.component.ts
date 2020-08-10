@@ -46,7 +46,7 @@ export class CustomerMainComponent implements OnInit {
         this.companies = data; 
       },
       fail => {
-        this.alert="problem with load companies list",
+        this.alert="Sorry, problem with load companies list, Please try later",
         this.blockedDocument=false;
       });
 
@@ -66,7 +66,7 @@ export class CustomerMainComponent implements OnInit {
     var mimeType = this.myFile.type;
     
     if (mimeType.match(/image\/*/) == null) {
-      this.alert=("קובץ זה אינו נתמך. נא לבחור בקובץ תמונה");
+      this.alert=("Please select image file");
       return;
     }
     
@@ -84,18 +84,12 @@ export class CustomerMainComponent implements OnInit {
   save(){
     this.blockedDocument=true;
     var companiesName=[];
-    if(this.selectedCompanies==undefined)
+    if(this.selectedCompanies==undefined||this.selectedCompanies.length<=0)
     {
-      this.alert=("no companies choosen, choose and try again");
+      this.alert=("Please select a company");
       this.blockedDocument=false;
       return;
     }//if
-    if(this.selectedCompanies.length<=0)
-    {
-      this.alert=("no companies choosen, choose and try again");
-      this.blockedDocument=false;
-      return;
-    }
     for(var i=0;i<this.selectedCompanies.length;i++)
     {
       companiesName.push(this.selectedCompanies[i].name)
@@ -117,19 +111,19 @@ export class CustomerMainComponent implements OnInit {
             else
             {
               this.blockedDocument = false,
-              this.alert=( "problem occured in server, please try later");
+              this.alert=( "Sorry, problem occured in server, Please try later");
             }//else
           }//if res
           else
           {
             this.blockedDocument = false,
-            this.alert=( "problem occured in server , please try later");
+            this.alert=( "Sorry, problem occured in server, Please try later");
           }//else
         }//data
       )//subscribe
     }//if get profile
     else{
-      this.alert=("you don't choose file, choose and try again");
+      this.alert=("Please select image file");
       this.blockedDocument=false;
       return;
     }//else

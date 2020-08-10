@@ -22,6 +22,7 @@ import {ListboxModule} from 'primeng/listbox';
 import {RadioButtonModule} from 'primeng/radiobutton';
 import {InputMaskModule} from 'primeng/inputmask';
 import {ButtonModule} from 'primeng/button';
+import {TooltipModule} from 'primeng/tooltip';
 
 
 //app components
@@ -122,7 +123,8 @@ import { CommonModule } from '@angular/common';
     TableModule,
     CardModule,
     BlockUIModule,
-    CommonModule
+    CommonModule,
+    TooltipModule
   ],
   
   providers: [
