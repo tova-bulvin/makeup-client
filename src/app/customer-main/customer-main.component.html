@@ -4,8 +4,9 @@
   <br>
   <h1>Find Your Make-Up color</h1>
   
-  <p-blockUI  [blocked]="blockedDocument">
-      <i class="pi pi-spin pi-spinner" style="position:absolute;top:25%;left:50%;font-size: 200px"></i>
+  <p-blockUI [blocked]="blockedDocument">
+      <i class="pi pi-spin pi-spinner spinner"></i>
+      <div class="block-span">{{blockContent}}</div>
   </p-blockUI>
 
   <div class="main-div">
@@ -41,7 +42,7 @@
 
   <div style="text-align: center;margin-top: 40px">
     <button pButton type="button" (click)="save()"  icon= "pi pi-check-circle" label="ok" class="btn"></button>
-    <button pButton type="button" icon="pi pi-bars"  (click)="back()" label="Back menu" class="btn"></button>
+    <button pButton type="button" icon="pi pi-home"  (click)="back()" label="Back Home" class="btn"></button>
   </div>
 
   <!-- <div class="danger" *ngIf="message">{{message}}</div> -->

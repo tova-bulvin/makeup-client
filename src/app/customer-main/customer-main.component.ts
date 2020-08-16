@@ -37,7 +37,8 @@ export class CustomerMainComponent implements OnInit {
   file: any;
   uploadForm: FormGroup;
   alert:string;
-
+  blockContent="We are process your image..."
+  blockContentArr=["We are process your image...","Please wait a few seconds...","It's almost ready..."];
 
   constructor(private companyService:CompanyService,private customerService:CustomerService,private router: Router, private formBuilder: FormBuilder) {
     this.matchMakeUpDto=new MatchMakeUpDto();
@@ -49,7 +50,7 @@ export class CustomerMainComponent implements OnInit {
         this.alert="Sorry, problem with load companies list, Please try later",
         this.blockedDocument=false;
       });
-
+      this.blockPage();
   }
 
   ngOnInit() {
@@ -80,7 +81,13 @@ export class CustomerMainComponent implements OnInit {
      
   }
   
-  
+  blockPage(){
+    var i=0
+    setInterval(()=>{
+      i>this.blockContentArr.length-1?i=0:i;
+      this.blockContent=this.blockContentArr[i++];
+    },2000);
+  }
   save(){
     this.blockedDocument=true;
     var companiesName=[];
