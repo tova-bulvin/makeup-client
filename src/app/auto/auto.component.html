@@ -13,7 +13,7 @@
     <br>
     <div style="text-align: center">
       <span class="p-inputgroup">
-          <span class="p-inputgroup-addon"><i (mouseover)="mouseOverPassword()" (mouseout)="mouseLeavePassword()" class="fa fa-eye{{iconPassword}}"></i></span>
+          <span class="p-inputgroup-addon"><i tabindex="0" (focusin)="mouseOverPassword()" (focusout)="mouseLeavePassword()" class="fa fa-eye{{iconPassword}}"></i></span>
           <input type="{{typePassword}}" maxlength="9" minlength="9" required size="9" (change)="onchangePassword()" placeholder="password" pInputText [(ngModel)]="password">
       </span>
     </div>
