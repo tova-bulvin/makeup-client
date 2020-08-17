@@ -18,6 +18,9 @@ export class DisplayProductComponent implements OnInit {
   imgURL:any
   numChoose:number
   matchMakeUpDto:MatchMakeUpDto
+  display: boolean = false;
+
+
   constructor(private router: Router,private route: ActivatedRoute,private sanitizer: DomSanitizer) { 
   this.matchMakeUpDto=new MatchMakeUpDto()
     this.route.queryParams.subscribe(params => {

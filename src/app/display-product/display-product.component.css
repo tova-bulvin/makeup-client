@@ -16,7 +16,7 @@
 .image{
     background-image: url('../../assets/images/p1.jpg');
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: cover;
     display:block;
     height: 1200px;
 }

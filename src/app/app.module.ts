@@ -61,6 +61,7 @@ import { PrintProductComponent } from './print-product/print-product.component';
 import {TableModule} from 'primeng/table';
 import {BlockUIModule} from 'primeng/blockui';
 import { CommonModule } from '@angular/common'; 
+import {DialogModule} from 'primeng/dialog';
 
 
 
@@ -124,7 +125,8 @@ import { CommonModule } from '@angular/common';
     CardModule,
     BlockUIModule,
     CommonModule,
-    TooltipModule
+    TooltipModule,
+    DialogModule
   ],
   
   providers: [
