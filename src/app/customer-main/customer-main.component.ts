@@ -65,19 +65,20 @@ export class CustomerMainComponent implements OnInit {
     this.myFile = event.target.files[0];
     this.uploadForm.get('profile').setValue(this.myFile);
     var mimeType = this.myFile.type;
-    
-    if (mimeType.match(/image\/*/) == null) {
-      this.alert=("Please select image file");
-      return;
+    var format = mimeType.split("/");
+    if (!format[0].includes("image")||(!format[1].includes("jpeg")&&!format[1].includes("png"))) {
+      this.alert=("Please select a image file with png or jpg extension only");
     }
-    
-    this.fileName=this.myFile.name;
-    var reader = new FileReader();
-    reader.readAsDataURL(this.myFile);
-    reader.onload = (_event) => {
-      this.imgURL = reader.result;
+    else{
+      this.alert="";
+      this.fileName=this.myFile.name;
+      var reader = new FileReader();
+      reader.readAsDataURL(this.myFile);
+      reader.onload = (_event) => {
+        this.imgURL = reader.result;
+      }
+      
     }
-
      
   }
   
@@ -101,7 +102,7 @@ export class CustomerMainComponent implements OnInit {
     {
       companiesName.push(this.selectedCompanies[i].name)
     }//for
-    if(this.uploadForm.get('profile').value)
+    if(this.uploadForm.get('profile').value && this.imgURL!=undefined)
     {
       this.alert="";
       let frmData = new FormData();
@@ -130,7 +131,7 @@ export class CustomerMainComponent implements OnInit {
       )//subscribe
     }//if get profile
     else{
-      this.alert=("Please select image file");
+      this.alert=("Please select a image file with png or jpg extension only");
       this.blockedDocument=false;
       return;
     }//else
