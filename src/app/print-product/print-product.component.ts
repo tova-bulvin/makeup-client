@@ -56,7 +56,7 @@ export class PrintProductComponent implements OnInit {
   back(){
     this.router.navigateByUrl('/customer-main')
   }
-
+  
   email(){
 
     let printContents;
@@ -86,11 +86,13 @@ export class PrintProductComponent implements OnInit {
     this.emailFlag=false;
     this.blockedDocument=true
     this.customerService.sendMail(this.address,message).subscribe(
-     data=>{alert("your send is success");
-     this.blockedDocument=false;
-     },
-      fail=> {alert("problem with send email")
-      this.blockedDocument=false;
+      data=>{
+        alert("your send is success");
+        this.blockedDocument=false;
+      },
+      fail=> {
+        alert("problem with send email")
+        this.blockedDocument=false;
     }
       
     )

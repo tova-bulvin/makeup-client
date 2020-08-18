@@ -21,11 +21,14 @@
 </div>
 <br><br>
 <footer class="foot">
-    <button pButton type="button"  label="send mail" (click)="emailFlag=true" class="btn" icon="pi pi-envelope" style="margin-right: .25em"></button>
+    <button pButton type="button"  label="send mail" (click)="emailFlag=!emailFlag" class="btn" icon="pi pi-envelope" style="margin-right: .25em"></button>
     <button pButton type="button" (click)="print()" label="Print"  class="btn" icon="pi pi-print" style="margin-right: .25em"></button>
     <button pButton type="button" (click)="back()" label="Back to start" class="btn" icon="pi pi-chevron-circle-right" style="margin-right: .50em" ></button>
     <div *ngIf="emailFlag">
-        <input type="email" placeholder="enter mail" [(ngModel)]="address"  pInputText /><br>
-        <button pButton type="button" (click)="email()" label="ok" class="btn" icon="pi pi-check" style="margin-right: .25em"></button>
+        <div role="alert" *ngIf="email.invalid && (name.dirty || name.touched)" class="alert alert-danger">
+            <div>Email is invalid</div>
+        </div>
+        <input type="email" #email required placeholder="enter mail" [(ngModel)]="address"  pInputText /><br>
+        <button pButton type="button" (click)="if(email.valid){ email() }" label="ok" class="btn" icon="pi pi-check" style="margin-right: .25em"></button>
     </div>
 </footer>
