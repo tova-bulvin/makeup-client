@@ -63,11 +63,15 @@ export class CustomerMainComponent implements OnInit {
     if (event.target.files.length === 0)
       return;
     this.myFile = event.target.files[0];
+    debugger;
     this.uploadForm.get('profile').setValue(this.myFile);
     var mimeType = this.myFile.type;
     var format = mimeType.split("/");
     if (!format[0].includes("image")||(!format[1].includes("jpeg")&&!format[1].includes("png"))) {
       this.alert=("Please select a image file with png or jpg extension only");
+    }
+    else if(this.myFile.size>145000){
+       this.alert=("Temporarily upload a maximum image size of 145 KB only");
     }
     else{
       this.alert="";
@@ -131,7 +135,7 @@ export class CustomerMainComponent implements OnInit {
       )//subscribe
     }//if get profile
     else{
-      this.alert=("Please select a image file with png or jpg extension only");
+      this.alert=("Please select a image file with png or jpg extension only & size of 145 KB only");
       this.blockedDocument=false;
       return;
     }//else
