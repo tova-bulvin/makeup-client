@@ -69,8 +69,8 @@ export class CustomerMainComponent implements OnInit {
     if (!format[0].includes("image")||(!format[1].includes("jpeg")&&!format[1].includes("png"))) {
       this.alert=("Please select a image file with png or jpg extension only");
     }
-    else if(this.myFile.size>145000){
-       this.alert=("Temporarily upload a maximum image size of 145 KB only");
+    else if(this.myFile.size>149000){
+       this.alert=("Temporarily upload a maximum image size of 149 KB only");
     }
     else{
       this.alert="";
@@ -134,7 +134,7 @@ export class CustomerMainComponent implements OnInit {
       )//subscribe
     }//if get profile
     else{
-      this.alert=("Please select a image file with png or jpg extension only & size until of 145 KB only");
+      this.alert=("Please select a image file with png or jpg extension only & size until of 149 KB only");
       this.blockedDocument=false;
       return;
     }//else
