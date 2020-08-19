@@ -63,7 +63,6 @@ export class CustomerMainComponent implements OnInit {
     if (event.target.files.length === 0)
       return;
     this.myFile = event.target.files[0];
-    debugger;
     this.uploadForm.get('profile').setValue(this.myFile);
     var mimeType = this.myFile.type;
     var format = mimeType.split("/");
