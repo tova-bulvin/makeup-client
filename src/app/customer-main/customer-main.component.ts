@@ -134,7 +134,7 @@ export class CustomerMainComponent implements OnInit {
       )//subscribe
     }//if get profile
     else{
-      this.alert=("Please select a image file with png or jpg extension only & size of 145 KB only");
+      this.alert=("Please select a image file with png or jpg extension only & size until of 145 KB only");
       this.blockedDocument=false;
       return;
     }//else
