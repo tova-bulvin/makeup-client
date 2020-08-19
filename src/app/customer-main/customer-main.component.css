@@ -55,6 +55,9 @@
     width: 40%;
     font-weight: bold;
   }
+  .img-alert{
+    width: max-content;
+  }
   .spinner{
     position:absolute;
     top:25%;

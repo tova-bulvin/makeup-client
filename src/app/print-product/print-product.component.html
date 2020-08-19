@@ -29,6 +29,6 @@
             <div>Email is invalid</div>
         </div>
         <input type="email" #email required placeholder="enter mail" [(ngModel)]="address"  pInputText /><br>
-        <button pButton type="button" (click)="if(email.valid){ email() }" label="ok" class="btn" icon="pi pi-check" style="margin-right: .25em"></button>
+        <button pButton type="button" (click)="email()" label="ok" *ngIf="email.valid"  class="btn" icon="pi pi-check" style="margin-right: .25em"></button>
     </div>
 </footer>
