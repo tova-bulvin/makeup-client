@@ -1,0 +1,48 @@
+{
+    "HEADER":{
+        "LOGO":"",
+        "LINKS":{
+            "HOME-PAGE":"home page",
+            "ADMIN":"Admin",
+            "CUSROMER":"Customer"
+        }
+    },
+    "HOME":{
+        "MAIN-HEAD":"Find Your Make-Up Color",
+        "SUB-HEAD":"Come and try to find the perfect make-up color for you",
+        "LETS-START":"Lets Start!"
+    },
+    
+    "CustomerMain":{
+        "MAIN-HEAD":"Find Your Make-Up color",
+        "STEPS":{
+            "ONE":"Upload image",
+            "TWO":"Choose company/ies",
+            "THREE":"Press OK",
+            "STEP":"Step"
+        },
+        "SUBMIT":"ok",
+        "Back Home":"Back Home",
+        "companies list":"companies list",
+        "ALERT":{
+            "IMG":{
+                "CHOOSE":"",
+                "SIZE":"Please upload image until 149KB only",
+                "APP-SIZE":"Temporarily upload a maximum image size of 149 KB only",
+                "EXTENTION":"Please select a image file with png or jpg extension only",
+                "QUALITY":" For a precise fit, Please upload a picture that is as clear and high-quality as possible, Showing only your face",
+                "ALL":"Please select a image file with png or jpg extension only & size until of 149 KB only"
+            },
+            "COMPANY":"Please select a company",
+            "PROBLEM-IN-SERVER":"Sorry, problem occured in server, Please try later",
+            "BLOCK-CONTENT":{
+                "ONE":"We are process your image...",
+                "TWO":"Please wait a few seconds...",
+                "THREE":"It's almost ready..."
+            }
+        }
+    },
+    "FOOTER":{
+        "RIGHTS":"All rights reserved to make your makeup"
+    }
+}

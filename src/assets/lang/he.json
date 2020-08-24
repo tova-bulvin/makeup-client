@@ -1,0 +1,48 @@
+{
+    "HEADER":{
+        "LOGO":"",
+        "LINKS":{
+            "HOME-PAGE":"דף הבית",
+            "ADMIN":"מנהל",
+            "CUSROMER":"לקוח"
+        }
+    },
+    "HOME":{
+        "MAIN-HEAD":"מצא את צבע המייקאפ שלך",
+        "SUB-HEAD":"בואו לנסות למצוא את צבע האיפור המושלם עבורכם",
+        "LETS-START":"!בואו נתחיל"
+    },
+    
+    "CustomerMain":{
+        "MAIN-HEAD":"מצא את צבע המייקאפ שלך",
+        "STEPS":{
+            "ONE":"מעלים תמונה",
+            "TWO":"בוחרים חברה או חברות",
+            "THREE":"OK לוחצים על",
+            "STEP":"צעד"
+        },
+        "SUBMIT":"ok",
+        "Back Home":"חזרה לדף הבית",
+        "companies list":"רשימת החברות",
+        "ALERT":{
+            "IMG":{
+                "CHOOSE":"",
+                "SIZE":"149KB נא להעלות תמונה עד גודל של",
+                "APP-SIZE":"149KB זמנית, ניתן להעלות תמונה עד גודל של",
+                "EXTENTION":"Please select a image file with png or jpg extension only",
+                "QUALITY":" For a precise fit, Please upload a picture that is as clear and high-quality as possible, Showing only your face",
+                "ALL":"Please select a image file with png or jpg extension only & size until of 149 KB only"
+            },
+            "COMPANY":"Please select a company",
+            "PROBLEM-IN-SERVER":"Sorry, problem occured in server, Please try later",
+            "BLOCK-CONTENT":{
+                "ONE":"We are process your image...",
+                "TWO":"Please wait a few seconds...",
+                "THREE":"It's almost ready..."
+            }
+        }
+    },
+    "FOOTER":{
+        "RIGHTS":"All rights reserved to make your makeup"
+    }
+}

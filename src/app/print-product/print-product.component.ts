@@ -18,6 +18,8 @@ export class PrintProductComponent implements OnInit {
   address:string
   emailFlag:boolean=false
   blockedDocument: boolean = false;
+  alert="";
+  alertClass="danger";
 
   constructor(private route: ActivatedRoute,private router:Router,private customerService:CustomerService) {
     this.product=new ProductDto
@@ -57,46 +59,51 @@ export class PrintProductComponent implements OnInit {
     this.router.navigateByUrl('/customer-main')
   }
   
-  email(){
-
-    let printContents;
-    //document.getElementById("color").setAttribute("hidden","hidden");
-    printContents = document.getElementById('print-section').innerHTML;
-    let message:string=`
-    <html>
-      <head>
-        <title>Print tab</title>
-        <style>
-        //........Customized style.......
-        </style>
-        <script>
-        function color(){
-          var r =document.getElementById("r").innerHTML;
-          var g=document.getElementById("g").innerHTML;
-          var b =document.getElementById("b").innerHTML;
-          let style1="background-color: rgb"+"("+r+" "+ g+" "+b+")";
-          style1+=';width: 100px;height: 100px;border-radius: 50%;font-size:20px;font-family: Cambria, Cochin, Georgia, Times,Times New Roman, serif;font-weight: 600;display: inline-block;text-align:center;';
-          var d=document.getElementById("color");
-          d.setAttribute("style",style1);
-        }
-         </script>
-      </head>
-      <body onload="color()">${printContents}</body>
-    </html>`;
-    this.emailFlag=false;
-    this.blockedDocument=true
-    this.customerService.sendMail(this.address,message).subscribe(
-      data=>{
-        alert("your send is success");
-        this.blockedDocument=false;
-      },
-      fail=> {
-        alert("problem with send email")
-        this.blockedDocument=false;
+  email(emailValid){
+    if(!emailValid){
+      this.alertClass="danger";
+      this.alert="The mail not valid, Please try again";
     }
-      
-    )
+    else{
+      let printContents;
+      //document.getElementById("color").setAttribute("hidden","hidden");
+      printContents = document.getElementById('print-section').innerHTML;
+      let message:string=`
+      <html>
+        <head>
+          <title>Print tab</title>
+          <style>
+          //........Customized style.......
+          </style>
+          <script>
+          function color(){
+            var r =document.getElementById("r").innerHTML;
+            var g=document.getElementById("g").innerHTML;
+            var b =document.getElementById("b").innerHTML;
+            let style1="background-color: rgb"+"("+r+" "+ g+" "+b+")";
+            style1+=';width: 100px;height: 100px;border-radius: 50%;font-size:20px;font-family: Cambria, Cochin, Georgia, Times,Times New Roman, serif;font-weight: 600;display: inline-block;text-align:center;';
+            var d=document.getElementById("color");
+            d.setAttribute("style",style1);
+          }
+          </script>
+        </head>
+        <body onload="color()">${printContents}</body>
+      </html>`;
+      this.emailFlag=false;
+      this.blockedDocument=true
+      this.customerService.sendMail(this.address,message).subscribe(
+        data=>{
+          this.alertClass="success";
+          this.alert=("your send is success");
+          this.blockedDocument=false;
+        },
+        fail=> {
+          this.alertClass="danger";
+          this.alert=("problem with send email")
+          this.blockedDocument=false;
+      })
     //this.blockedDocument=false
+    }
   }
   print(): void {
     //document.getElementById("color").setAttribute("hidden","hidden");
