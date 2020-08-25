@@ -29,20 +29,20 @@
                 "CHOOSE":"",
                 "SIZE":"149KB נא להעלות תמונה עד גודל של",
                 "APP-SIZE":"149KB זמנית, ניתן להעלות תמונה עד גודל של",
-                "EXTENTION":"Please select a image file with png or jpg extension only",
-                "QUALITY":" For a precise fit, Please upload a picture that is as clear and high-quality as possible, Showing only your face",
-                "ALL":"Please select a image file with png or jpg extension only & size until of 149 KB only"
+                "EXTENTION":"png / jpg נא להעלות תמונה בסיומת",
+                "QUALITY":"להתאמה מושלמת, נא להעלות תמונה ברורה ואיכותית ככל האפשר,אשר מכילה את הפנים שלך בלבד",
+                "ALL":"149KB ובגודל עד png / jpg נא להעלות קובץ תמונה בלבד בסיומת"
             },
-            "COMPANY":"Please select a company",
-            "PROBLEM-IN-SERVER":"Sorry, problem occured in server, Please try later",
+            "COMPANY":"יש לבחור חברה",
+            "PROBLEM-IN-SERVER":"מצטערים, ארעה תקלה בשרת, נא נסו מאוחר יותר",
             "BLOCK-CONTENT":{
-                "ONE":"We are process your image...",
-                "TWO":"Please wait a few seconds...",
-                "THREE":"It's almost ready..."
+                "ONE":"...אנחנו מעבדים את התמונה שלך",
+                "TWO":"...עוד כמה שניות",
+                "THREE":"...כמעט מוכן"
             }
         }
     },
     "FOOTER":{
-        "RIGHTS":"All rights reserved to make your makeup"
+        "RIGHTS":"make your makeupכל הזכויות שמורות ל"
     }
 }
