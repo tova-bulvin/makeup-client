@@ -68,15 +68,23 @@ export class PrintProductComponent implements OnInit {
       <head>
         <title>Print tab</title>
         <style>
-        //........Customized style.......
+          #color{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            font-size:20px;
+            font-family: Cambria, Cochin, Georgia, Times,Times New Roman, serif;
+            font-weight: 600;
+            display: inline-block;
+            text-align:center;
+          }
         </style>
         <script>
         function color(){
-          var r =document.getElementById("r").innerHTML;
+          var r=document.getElementById("r").innerHTML;
           var g=document.getElementById("g").innerHTML;
-          var b =document.getElementById("b").innerHTML;
+          var b=document.getElementById("b").innerHTML;
           let style1="background-color: rgb"+"("+r+" "+ g+" "+b+")";
-          style1+=';width: 100px;height: 100px;border-radius: 50%;font-size:20px;font-family: Cambria, Cochin, Georgia, Times,Times New Roman, serif;font-weight: 600;display: inline-block;text-align:center;';
           var d=document.getElementById("color");
           d.setAttribute("style",style1);
         }
@@ -88,7 +96,7 @@ export class PrintProductComponent implements OnInit {
     this.blockedDocument=true
     this.customerService.sendMail(this.address,message).subscribe(
       data=>{
-        this.alert="Your send is success";
+        this.alert="Email sent successfully";
         this.alertClass="success";
         this.blockedDocument=false;
       },
@@ -112,14 +120,22 @@ export class PrintProductComponent implements OnInit {
     <head>
       <title>Print tab</title>
       <style>
-      //........Customized style.......
+        #color{
+          width: 100px;
+          height: 100px;
+          border-radius: 50%;
+          font-size:20px;
+          font-family: Cambria, Cochin, Georgia, Times,Times New Roman, serif;
+          font-weight: 600;
+          display: inline-block;
+          text-align:center;
+        }
       </style>
       <script>
       var r =document.getElementById("r").innerHTML;
       var g=document.getElementById("g").innerHTML;
       var b =document.getElementById("b").innerHTML;
       let style1="background-color: rgb"+"("+r+" "+ g+" "+b+")";
-      style1+=';width: 100px;height: 100px;border-radius: 50%;font-size:20px;font-family: Cambria, Cochin, Georgia, Times,Times New Roman, serif;font-weight: 600;display: inline-block;text-align:center;';
       var d=document.getElementById("color");
       d.setAttribute("style",style1);
        </script>
