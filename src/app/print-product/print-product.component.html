@@ -21,7 +21,7 @@
 </div>
 <br><br>
 <footer class="foot">
-    <button pButton type="button"  label="send mail" (click)="emailFlag=!emailFlag" class="btn" icon="pi pi-envelope" style="margin-right: .25em"></button>
+    <button pButton type="button"  label="send mail" (click)="emailFlag=!emailFlag;alert='';" class="btn" icon="pi pi-envelope" style="margin-right: .25em"></button>
     <button pButton type="button" (click)="print()" label="Print"  class="btn" icon="pi pi-print" style="margin-right: .25em"></button>
     <button pButton type="button" (click)="back()" label="Back to start" class="btn" icon="pi pi-chevron-circle-right" style="margin-right: .50em" ></button>
     <div class="alert-{{alertClass}} alert" *ngIf="alert">{{alert}}</div>
