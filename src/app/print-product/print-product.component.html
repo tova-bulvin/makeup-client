@@ -4,22 +4,6 @@
 
 <div id="print-section" >
     <div style="width: 360px;margin:auto;background-color:blanchedalmond;text-align: left;padding: 4px  4px  4px  8px;border-radius: 15%;border-style: solid">
-        <script>
-            function color(){
-              if(document.getElementById("r")!=null && document.getElementById("g")!=null && document.getElementById("b")!=null)
-              {
-                var r=document.getElementById("r").innerHTML;
-                var g=document.getElementById("g").innerHTML;
-                var b =document.getElementById("b").innerHTML;
-                let style1="background-color: rgb"+"("+r+" "+ g+" "+b+")";
-                var d=document.querySelector("[id*=color]");
-                d.setAttribute("style",style1);
-              }
-            }
-            window.addEventListener('load', (event) => {
-              color();
-            });
-        </script>
         <h1 style="font-size: 30px;text-decoration-line: underline;text-align: center">your makeup</h1>
         <label style="font-size: larger; font-weight: 700">id: </label><span>{{product.id}}</span><br/>
         <label style="font-size: larger; font-weight: 700">codeInCompany: </label><span>{{product.codeInCompany}}</span><br/>

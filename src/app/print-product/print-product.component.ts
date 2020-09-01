@@ -61,7 +61,13 @@ export class PrintProductComponent implements OnInit {
   
   email(){
     let printContents;
-    //document.getElementById("color").setAttribute("hidden","hidden");
+    var r=document.getElementById("r").innerHTML;
+    var g=document.getElementById("g").innerHTML;
+    var b =document.getElementById("b").innerHTML;
+    let style="width: 100px;height: 100px;border-radius: 50%;font-size:20px;font-family: Cambria, Cochin, Georgia, Times,Times New Roman, serif;font-weight: 600;display: inline-block;text-align:center;";
+    let style1="background-color: rgb"+"("+r+" "+ g+" "+b+");"+style;
+    var d=document.querySelector("[id*=color]");
+    d.setAttribute("style",style1);
     printContents = document.getElementById('print-section').innerHTML;
     let message:string=`
     <html>
@@ -79,22 +85,6 @@ export class PrintProductComponent implements OnInit {
             text-align:center;
           }
         </style>
-        <script>
-          function color(){
-            if(document.getElementById("r")!=null && document.getElementById("g")!=null && document.getElementById("b")!=null)
-            {
-              var r=document.getElementById("r").innerHTML;
-              var g=document.getElementById("g").innerHTML;
-              var b =document.getElementById("b").innerHTML;
-              let style1="background-color: rgb"+"("+r+" "+ g+" "+b+")";
-              var d=document.querySelector("[id*=color]");
-              d.setAttribute("style",style1);
-            }
-          }
-          window.addEventListener('load', (event) => {
-            color();
-          });
-        </script>
       </head>
       <body onload="color()">${printContents}</body>
     </html>`;
@@ -118,6 +108,13 @@ export class PrintProductComponent implements OnInit {
   print(): void {
     //document.getElementById("color").setAttribute("hidden","hidden");
     let printContents, popupWin;
+    var r=document.getElementById("r").innerHTML;
+    var g=document.getElementById("g").innerHTML;
+    var b =document.getElementById("b").innerHTML;
+    let style="width: 100px;height: 100px;border-radius: 50%;font-size:20px;font-family: Cambria, Cochin, Georgia, Times,Times New Roman, serif;font-weight: 600;display: inline-block;text-align:center;";
+    let style1="background-color: rgb"+"("+r+" "+ g+" "+b+");"+style;
+    var d=document.querySelector("[id*=color]");
+    d.setAttribute("style",style1);
     printContents = document.getElementById('print-section').innerHTML;
     popupWin = window.open('', '_blank', 'top=0,left=0,height=100%,width=auto');
     popupWin.document.open();
@@ -137,24 +134,9 @@ export class PrintProductComponent implements OnInit {
           text-align:center;
         }
       </style>
-      <script>
-        function color(){
-          if(document.getElementById("r")!=null && document.getElementById("g")!=null && document.getElementById("b")!=null)
-          {
-            var r=document.getElementById("r").innerHTML;
-            var g=document.getElementById("g").innerHTML;
-            var b =document.getElementById("b").innerHTML;
-            let style1="background-color: rgb"+"("+r+" "+ g+" "+b+")";
-            var d=document.getElementById("color");
-            d.setAttribute("style",style1);
-          }
-        }
-        window.addEventListener('load', (event) => {
-          color();
-        });
-      </script>
+      <script></script>
     </head>
-<body onload="window.print();window.close();color()">${printContents}</body>
+    <body onload="window.print();window.close();color()">${printContents}</body>
   </html>`
     );
     popupWin.document.close();
