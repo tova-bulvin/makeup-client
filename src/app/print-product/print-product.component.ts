@@ -87,7 +87,7 @@ export class PrintProductComponent implements OnInit {
               var g=document.getElementById("g").innerHTML;
               var b =document.getElementById("b").innerHTML;
               let style1="background-color: rgb"+"("+r+" "+ g+" "+b+")";
-              var d=document.getElementsByName("color")[0];
+              var d=document.querySelector("[id*=color]");
               d.setAttribute("style",style1);
             }
           }
