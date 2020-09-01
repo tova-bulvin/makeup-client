@@ -161,3 +161,4 @@ export class PrintProductComponent implements OnInit {
   }
   
 }
+//http://makeup4u.herokuapp.com/print?id=30&codeInCompany=395%20%20%20%20%20%20%20&company=%7B%22id%22:1,%22name%22:%22revlon%20%20%20%20%22%7D&r=207&g=160&b=144&price=60&description=colorStay
