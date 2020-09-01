@@ -80,21 +80,21 @@ export class PrintProductComponent implements OnInit {
           }
         </style>
         <script>
-        function color(){
-          if(document.getElementById("r")!=null && document.getElementById("g")!=null && document.getElementById("b")!=null)
-          {
-            var r=document.getElementById("r").innerHTML;
-            var g=document.getElementById("g").innerHTML;
-            var b =document.getElementById("b").innerHTML;
-            let style1="background-color: rgb"+"("+r+" "+ g+" "+b+")";
-            var d=document.getElementById("color");
-            d.setAttribute("style",style1);
+          function color(){
+            if(document.getElementById("r")!=null && document.getElementById("g")!=null && document.getElementById("b")!=null)
+            {
+              var r=document.getElementById("r").innerHTML;
+              var g=document.getElementById("g").innerHTML;
+              var b =document.getElementById("b").innerHTML;
+              let style1="background-color: rgb"+"("+r+" "+ g+" "+b+")";
+              var d=document.getElementsByName("color")[0];
+              d.setAttribute("style",style1);
+            }
           }
-        }
-        window.addEventListener('load', (event) => {
-          color();
-        });
-      </script>
+          window.addEventListener('load', (event) => {
+            color();
+          });
+        </script>
       </head>
       <body onload="color()">${printContents}</body>
     </html>`;
