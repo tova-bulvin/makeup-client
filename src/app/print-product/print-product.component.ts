@@ -47,7 +47,6 @@ export class PrintProductComponent implements OnInit {
     var b=this.product.b;
     let style1="background-color: rgb"+"("+r+" "+ g+" "+b+");padding-top:20px";
     style1+=';width: 100px;height: 100px;border-radius: 50%;font-size:20px;font-family: Cambria, Cochin, Georgia, Times,Times New Roman, serif;font-weight: 600;display: inline-block;text-align:center;';
-    var d=document.getElementById("color");
     this.myStyle=style1;
   }
  
@@ -58,7 +57,6 @@ export class PrintProductComponent implements OnInit {
   email(){
     let printContents;
     printContents = document.getElementById('print-section').innerHTML;
-    console.log(printContents);
     let message:string=`
     <html>
       <head>
