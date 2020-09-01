@@ -73,20 +73,8 @@ export class PrintProductComponent implements OnInit {
     <html>
       <head>
         <title>Print tab</title>
-        <style>
-          #color{
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            font-size:20px;
-            font-family: Cambria, Cochin, Georgia, Times,Times New Roman, serif;
-            font-weight: 600;
-            display: inline-block;
-            text-align:center;
-          }
-        </style>
       </head>
-      <body onload="color()">${printContents}</body>
+      <body>${printContents}</body>
     </html>`;
     this.emailFlag=false;
     this.blockedDocument=true
@@ -136,7 +124,7 @@ export class PrintProductComponent implements OnInit {
       </style>
       <script></script>
     </head>
-    <body onload="window.print();window.close();color()">${printContents}</body>
+    <body onload="window.print();window.close();">${printContents}</body>
   </html>`
     );
     popupWin.document.close();
