@@ -81,15 +81,20 @@ export class PrintProductComponent implements OnInit {
         </style>
         <script>
         function color(){
-          var r=document.getElementById("r").innerHTML;
-          var g=document.getElementById("g").innerHTML;
-          var b=document.getElementById("b").innerHTML;
-          let style1="background-color: rgb"+"("+r+" "+ g+" "+b+")";
-          console.log(style1);
-          var d=document.getElementById("color");
-          d.setAttribute("style",style1);
+          if(document.getElementById("r")!=null && document.getElementById("g")!=null && document.getElementById("b")!=null)
+          {
+            var r=document.getElementById("r").innerHTML;
+            var g=document.getElementById("g").innerHTML;
+            var b =document.getElementById("b").innerHTML;
+            let style1="background-color: rgb"+"("+r+" "+ g+" "+b+")";
+            var d=document.getElementById("color");
+            d.setAttribute("style",style1);
+          }
         }
-        </script>
+        window.addEventListener('load', (event) => {
+          color();
+        });
+      </script>
       </head>
       <body onload="color()">${printContents}</body>
     </html>`;
@@ -133,13 +138,21 @@ export class PrintProductComponent implements OnInit {
         }
       </style>
       <script>
-      var r =document.getElementById("r").innerHTML;
-      var g=document.getElementById("g").innerHTML;
-      var b =document.getElementById("b").innerHTML;
-      let style1="background-color: rgb"+"("+r+" "+ g+" "+b+")";
-      var d=document.getElementById("color");
-      d.setAttribute("style",style1);
-       </script>
+        function color(){
+          if(document.getElementById("r")!=null && document.getElementById("g")!=null && document.getElementById("b")!=null)
+          {
+            var r=document.getElementById("r").innerHTML;
+            var g=document.getElementById("g").innerHTML;
+            var b =document.getElementById("b").innerHTML;
+            let style1="background-color: rgb"+"("+r+" "+ g+" "+b+")";
+            var d=document.getElementById("color");
+            d.setAttribute("style",style1);
+          }
+        }
+        window.addEventListener('load', (event) => {
+          color();
+        });
+      </script>
     </head>
 <body onload="window.print();window.close();color()">${printContents}</body>
   </html>`
