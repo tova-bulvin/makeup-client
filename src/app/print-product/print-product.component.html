@@ -29,10 +29,13 @@
         <div role="alert" *ngIf="!myemail.validity.valid" class="alert alert-danger">
             <div>Email is invalid</div>
         </div>
-        <div role="alert" *ngIf="myemail.validity.valid" class="alert alert-success">
+        <div role="alert" *ngIf="myemail.validity.valid  && (myemail.value.includes('gmail.com') ||  myemail.value.includes('GMAIL.COM'))" class="alert alert-success">
             <div>Email is valid</div>
         </div>
+        <div role="alert" *ngIf="myemail.validity.valid && (!myemail.value.includes('gmail.com') &&  !myemail.value.includes('GMAIL.COM'))" class="alert alert-danger">
+            <div>Enter Gmail email only</div>
+        </div>
         <input type="email" #myemail required placeholder="enter mail" [(ngModel)]="address"  pInputText /><br>
-        <button pButton [disabled]="!myemail.validity.valid" (click)="email()" label="ok" class="btn" icon="pi pi-check" style="margin-right: .25em"></button>
+        <button pButton [disabled]="!myemail.validity.valid || !myemail.value.includes('gmail.com') &&  !myemail.value.includes('GMAIL.COM')" (click)="email()" label="ok" class="btn" icon="pi pi-check" style="margin-right: .25em"></button>
     </div>
 </footer>
