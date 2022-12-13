@@ -34,7 +34,7 @@
     "core-js": "^3.6.5",
     "dialog": "^0.3.1",
     "emailjs": "^3.0.0",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "font-awesome": "^4.7.0",
     "jquery": "^3.3.1",
     "menu": "^0.2.5",
